@@ -49,7 +49,7 @@ Each of the virtual machines can accept connections from the Internet but only u
         76.101.174.173
 ```
 ![RedTeamNSG](/Screenshots/Red-Team-NSG.PNG)
-![ELKNSG](/Screenshots/ELK NSG rules.PNG)
+![ELKNSG](/Screenshots/ELK-NSG-rules.PNG)
 
 Machines within the network can only be accessed directly via SSH by the Jump-Box-Provisioner virtual machine.
 
