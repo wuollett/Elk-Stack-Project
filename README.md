@@ -38,7 +38,7 @@ The configuration details of each machine may be found below.
 | ELK-Stack-Server     | Data Aggregator | 10.1.0.4   | 13.64.150.214 | Linux            | elk                | Host Elastic Search, Logstash, and Kibana |
 
 A visual of the virtual machines in the Azure Portal.
-![VMS](/Screenshots/Cloud VMs.PNG)
+![VMS](/Screenshots/Cloud-VMs.PNG)
 
 ### Access Policies
 
@@ -98,7 +98,7 @@ These Beats allow us to collect the following information from each machine:
 - Metricbeat collects statistics on the usage on the system, such as network, memrory, and cpu.
 
 An Example of a combined beats dashboard:
-![MetricFileBeatBoard](/Screenshots/Beats Dashboard.PNG)
+![MetricFileBeatBoard](/Screenshots/Beats-Dashboard.PNG)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -138,7 +138,7 @@ This update is shown here:
 Additonally, network security rules had to be updated to include multiple entries for which to SSH into the Jumpbox gateway, and to view the Elk websever. This may also occur if your ISP has your network IP set to be dynamic, in which case the Network Security Rules for which IP is able to connect must be updated accordingly.  
 
 One major advantage of the Ansible playbook system is that it is highly versatile, and mistakes in writing the playbook can be easily corrected and re-ran for the new changes to take effect. An example of this is shown here:
-![Filebeat](/Screenshots/Filebeat-setup error-on-Elk-Server.PNG)
+![Filebeat](/Screenshots/Filebeat-setup-error-on-Elk-Server.PNG)
 ![Filebeat error 2](/Screenshots/Filebeat-removal-part-1.PNG)
 
 In this instance, Filebeat was mistakenly placed on the ELK server rather than the Web-1 and Web-2 webservers. The only necessary step to rectify this mistake was updating the filebeat-playbook.yml file changing the hosts section of the playbook to be webservers rather than elk seen here:
